@@ -1,0 +1,109 @@
+@import '../../assets/colors';
+
+.header {
+    padding: 1rem 5% 0 5%;
+    .header-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .header-section-logo {
+            width: 130px;
+            height: 40px;
+            .header-section-logo-img {
+                width: 100%;
+                height: 100%;    
+            }
+        }
+        .header-section-icons {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            a {
+                color: $black;
+                position: relative;
+            }
+            .icons {
+                font-size: 1.2rem;
+                &:hover {
+                    color: $yellowHover;
+                    cursor: pointer;
+                }
+                .basket-count {
+                    position: absolute;
+                    top: 0;
+                    right: 0%;
+                    transform: translate(70%,-30%);
+                    font-size: 12px;
+                    font-weight: 500;
+                    color: red;
+                }
+            }
+        }
+    }
+    .category-names {
+        position: relative;
+        transition: 1000s;
+        .category-names-ul {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+            overflow-x: scroll;
+            li {
+                cursor: pointer;
+                border-bottom: 3px solid transparent;
+                a {
+                    text-decoration: none;
+                    text-transform: capitalize;
+                    color: $black;
+                    display: block;
+                    height: 100%;
+                    border-bottom: 3px solid transparent;
+                    padding-bottom: 1rem;
+                    &:hover {
+                        color: $yellowHover;
+                        border-bottom: 3px solid $yellowHover;
+                    }
+                }
+                .activeLink {
+                    color: $yellow;
+                    border-bottom: 3px solid $yellowHover;
+                }
+            }
+        }
+        .mega-menu {
+            z-index: 999;
+            position: absolute;
+            background-color: $gray;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            width: 100%;
+            display: flex;
+            gap: 1rem;
+            padding: 2rem;
+            .mega-menu-links {
+                font-weight: 500;
+                text-decoration: none;
+                color: $black;
+                font-size: 1.1rem;
+                &:hover {
+                    color: $yellow;
+                }
+            }
+        }
+    }
+}
+.category-names-ul::-webkit-scrollbar {
+    display: none;
+}
+
+.sign-buttons {
+    a {
+        color: black
+    }
+}
+
+@media only screen and (min-width: 350px) and (max-width: 768px) {
+    .hello-user{
+        display: none;
+    }
+}

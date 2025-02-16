@@ -1,0 +1,153 @@
+@import '../assets/colors';
+
+.basket-div {
+    display: flex;
+    justify-content: space-between;
+    .basket-product {
+        width: 75%;
+        .basket-card {
+            background-color: $gray;
+            border: 1px solid #E6E6E6;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            .basket-card-img {
+                width: 150px;
+                height: 150px;
+                display: flex;
+                justify-content: center;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    mix-blend-mode: darken;
+                    aspect-ratio: 3/2;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+            .basket-card-about {
+                padding: 10px 16px;
+                display: flex;
+                flex-direction: column;
+                .basket-card-about-title {
+                    font-weight: 600;
+                    width: 12rem;
+                }
+                .basket-card-price {
+                    color: $yellowHover;
+                }
+            }
+            .basket-card-buttons-div {
+                display: flex;
+                gap: 2rem;
+                padding: 1rem;
+                align-items: center;
+                .basket-card-buttons {
+                    display: flex;
+                    align-items: center;
+                    gap: .5rem;
+                    border: 1px solid black;
+                    border-radius: 20px;
+                    background-color: #c9c9c9;
+                    padding: 2px;
+                    button {
+                        font-size: 1rem;
+                        padding: .3rem .6rem;
+                        border-radius: 50%;
+                        border: none;
+                        background-color: $black;
+                        color: $yellow;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: $yellow;
+                            color: $black;
+                        }
+                        &:active {
+                            background-color: black;
+                        }
+                    }
+                }
+            }
+            .basket-card-delete {
+                font-size: 1.5rem;
+                cursor: pointer;
+                &:hover {
+                    color: $yellowHover;
+                }
+                &:active {
+                    color: darkslategray;
+                }
+            }
+        }
+    }
+    .price-evaluation {
+        background-color: #edededbf;
+        width: 20%;
+        height: 8rem;
+        border-radius: 16px;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .price-evaluation-amount {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+}
+
+
+
+@media only screen and (min-width: 350px) and (max-width: 768px) {
+    .basket-div {
+        flex-direction: column-reverse;
+        gap: 1rem;
+        .basket-product {
+            width: 100%;
+            font-size: 1.5rem;
+            .basket-card {
+                flex-direction: column;
+                gap: 0;
+                margin-bottom: 2rem;
+                .basket-card-img {
+                    width: 200px;
+                    height: 200px;
+                }
+                .basket-card-about {
+                    text-align: center;
+                    padding: 15px 10px;
+                    font-size: 1.4rem;
+                    .basket-card-about-title {
+                        font-weight: 500;
+                        width: 100%;
+                    }
+                    .basket-card-price {
+                        font-size: 1.5rem;
+                    }
+                }
+                // .basket-card-buttons {
+                    
+                //     button {
+                        
+                //     }
+                // }
+                // .basket-card-delete {
+                    
+                // }
+            }
+        }
+        .price-evaluation {
+            width: 100%;
+            height: 5rem;
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            
+        }
+    }
+}

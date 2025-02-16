@@ -1,0 +1,43 @@
+.mySwiper-landing {
+	width: 100%;
+	height: 650px !important;
+}
+.landing-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+
+	/* Center slide text vertically */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover !important;
+		object-position: top;
+	}
+}
+.landing-slide2 {
+	img {
+		object-fit: cover !important;
+		object-position: center !important;
+	}
+}
+
+.landing-slide4 {
+	display: none !important;
+}
+@media only screen and (min-width: 350px) and (max-width: 768px) {
+	.landing-slide3 {
+		display: none !important;
+	}
+	.landing-slide4 {
+		display: block !important;
+		img {
+			object-fit: cover;
+			object-position: top;
+		}
+	}
+}

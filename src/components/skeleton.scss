@@ -1,0 +1,31 @@
+.skeletons {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+
+    .skeleton-item {
+        width: 230px;
+        // background-color: red;
+        .test {
+         width: 230px !important;   
+        }
+    }
+}
+
+
+@media only screen and (min-width: 350px) and (max-width: 768px) {
+    .skeletons {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        // justify-content: space-between;
+
+        .skeleton-item {
+            width: 150px;
+            // background-color: red;
+            .test {
+             width: 150px !important;   
+            }
+        }
+    }
+}
