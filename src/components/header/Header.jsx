@@ -15,7 +15,6 @@ function Header(props) {
 	const [showMegaMenu, setShowMegaMenu] = useState(false);
 	const products = useSelector((state) => state.product);
 	const timerRef = useRef();
-	console.log(props.user);
 
 	useEffect(() => {
 		axios
