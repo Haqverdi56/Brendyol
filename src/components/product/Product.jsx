@@ -31,14 +31,15 @@ function Product(props) {
   return (
     <div className='product-card'>
         <div className='product-card-img'>
-            <Link to={`/details/${props.item._id}`}><img src={props.item?.thumbnail} alt="" /></Link>
+            <Link to={`/details/${props.item._id}`} style={{width:"100%"}}><img src={props.item?.thumbnail} alt="" /></Link>
             {
               heart ? <BsHeart className='heart-icon' onClick={() => addFavorite(props.item)} /> 
               : <BsHeartFill className='heart-icon' onClick={() => removeFavorite(props.item)} />
             }
         </div>
         <div className='product-card-about'>
-            <p className='product-card-about-title'>{props.item?.title}</p>  
+            <p className='product-card-about-title'>{props.item?.title}</p>
+            {/* <p>{props.item?.stock} ədəd</p> */}
             <p>{(props.item?.price)?.toFixed(2)} ₼</p>
             <button className='product-card-about-addButton' onClick={() => addProduct(props?.item)}>
               <FiShoppingCart />

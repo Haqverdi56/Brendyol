@@ -21,6 +21,7 @@ const Details = ({userData}) => {
   useEffect(() => {
     axios.get(`https://brendyol-fashion-backend.vercel.app/api/products/${params.id}`)
     .then(res => setDataItem(res.data))
+    window.scrollTo(0,0)
   }, [])
 
   useEffect(() => {
